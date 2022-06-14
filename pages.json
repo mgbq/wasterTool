@@ -1,0 +1,136 @@
+{
+	"easycom": { //easycom,按需自动注册组件。原则上可以把所有页面引入组件方法删掉，会自动引入。
+		"autoscan": true,
+		"custom": {
+			"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue",
+			"^uni-(.*)": "@/components/uni-$1/uni-$1.vue",
+			"^nx-(.*)": "@/components/nx-$1/nx-$1.vue"
+		}
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"backgroundColor": "#F6F6F6",
+				"backgroundTextStyle": "light",
+				"navigationBarBackgroundColor": "#00cc77",
+				"navigationBarTitleText": "智能垃圾分类",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/type/index",
+			"style": {
+				"backgroundColor": "#F6F6F6",
+				"backgroundTextStyle": "light",
+				"navigationBarBackgroundColor": "#00cc77",
+				"navigationBarTitleText": "智能垃圾分类",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/kaoshi/index",
+			"style": {
+				"backgroundColor": "#F6F6F6",
+				"backgroundTextStyle": "light",
+				"navigationBarBackgroundColor": "#00cc77",
+				"navigationBarTitleText": "考试",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/me/index",
+			"style": {
+				"backgroundColor": "#F6F6F6",
+				"backgroundTextStyle": "light",
+				"navigationBarBackgroundColor": "#00cc77",
+				"navigationBarTitleText": "我的",
+				"navigationBarTextStyle": "white"
+			}
+		}
+	],
+	"subPackages": [{
+		"root": "pages/public",
+		"pages": [{
+			"path": "404",
+			"name": "404",
+			"style": {
+				"navigationBarTitleText": "页面不存在"
+			}
+		}, {
+			"path": "search",
+			"name": "搜索",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
+		}]
+	},
+	{
+		"root": "pages-type",
+		"pages": [{
+			"path": "indexes",
+			"name": "indexes",
+			"style": {
+				"navigationBarTitleText": "分类详情"
+			}
+		}]
+	},
+	{
+		"root": "pages-me",
+		"pages": [{
+				"path": "examLog",
+				"name": "examLog",
+				"style": {
+					"navigationBarTitleText": "考试记录"
+				}
+			},
+			{
+				"path": "examSort",
+				"name": "examSort",
+				"style": {
+					"navigationBarTitleText": "考试排行"
+				}
+			}
+		]
+	}
+	],
+
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "通用模板",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"selectedColor": "#00cc77",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "搜索",
+				"iconPath": "/static/images/tabbar/search_defaut.png",
+				"selectedIconPath": "/static/images/tabbar/search_select.png"
+			},
+			{
+				"pagePath": "pages/type/index",
+				"text": "分类",
+				"iconPath": "/static/images/tabbar/icon_sort_default.png",
+				"selectedIconPath": "/static/images/tabbar/icon_sort.png"
+			},
+			{
+				"pagePath": "pages/kaoshi/index",
+				"text": "考试",
+				"iconPath": "/static/images/tabbar/ks.png",
+				"selectedIconPath": "/static/images/tabbar/ks-selected.png"
+			},
+			{
+				"pagePath": "pages/me/index",
+				"text": "我的",
+				"iconPath": "/static/images/tabbar/user.png",
+				"selectedIconPath": "/static/images/tabbar/user-selected.png"
+			}
+		]
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": []
+	}
+}

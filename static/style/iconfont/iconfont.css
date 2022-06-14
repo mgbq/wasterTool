@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2665182 */
+  src: url('//at.alicdn.com/t/font_2665182_g426yu9ur19.ttf?t=1637036589231') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 30px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #18B566;
+  margin: 0 auto;
+}
+
+.icon-paihang:before {
+  content: "\e607";
+}
+
+.icon-jilu:before {
+  content: "\e606";
+}
+
